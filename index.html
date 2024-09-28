@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Advanced Task Manager</h1>
+
+    <!-- Task Input Section -->
+    <div class="task-input">
+      <input type="text" id="new-task" placeholder="Enter a new task">
+      <input type="date" id="due-date" placeholder="Due Date">
+      <select id="category">
+        <option value="Work">Work</option>
+        <option value="Personal">Personal</option>
+        <option value="Urgent">Urgent</option>
+      </select>
+      <select id="priority">
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+      </select>
+      <input type="tel" id="phone-number" placeholder="Enter phone number for reminders"> <!-- added phone input -->
+      <input type="checkbox" id="recurring"> Recurring Task
+      <button id="add-task">Add Task</button>
+    </div>
+
+    <!-- Filter Tasks -->
+    <div class="filter">
+      <input type="text" id="search-task" placeholder="Search Tasks">
+      <label for="category-filter">Filter by Category:</label>
+      <select id="category-filter">
+        <option value="All">All</option>
+        <option value="Work">Work</option>
+        <option value="Personal">Personal</option>
+        <option value="Urgent">Urgent</option>
+      </select>
+      <label for="priority-filter">Filter by Priority:</label>
+      <select id="priority-filter">
+        <option value="All">All</option>
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+      </select>
+    </div>
+
+    <!-- Task List -->
+    <ul id="task-list" class="task-list"></ul>
+
+    <!-- Summary -->
+    <div class="summary">
+      <p><strong>Total Tasks:</strong> <span id="total-tasks">0</span></p>
+      <p><strong>Completed Tasks:</strong> <span id="completed-tasks">0</span></p>
+      <p><strong>Pending Tasks:</strong> <span id="pending-tasks">0</span></p>
+      <p><strong>Overall Progress:</strong> <span id="overall-progress">0%</span></p>
+    </div>
+
+    <!-- Dark Mode Toggle -->
+    <button id="dark-mode-toggle">Toggle Dark Mode</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
